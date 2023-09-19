@@ -14,10 +14,10 @@ anime({
   duration: 800,
   easing: "easeInOutSine",
 });
-
+ 
 anime({
   targets: ".hairlineSeparator",
-  translateX: ["-90vw", "10vw"],
+  translateY: ["14vh", "0vh"],
   duration: 600,
   easing: "easeInOutSine",
 });
