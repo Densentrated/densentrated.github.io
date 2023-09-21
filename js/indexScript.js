@@ -1,3 +1,5 @@
+// anime animation functions for index.html
+
 // header and subheadr movement
 anime({
   targets: ".subHeader",
@@ -9,15 +11,18 @@ anime({
 
 // navbar movement
 anime({
-  targets: ".navBar",
-  translateX: ["-100vw", "36vw"],
+  targets: "#navBar",
+  translateX: ["-100vw", "76vw"],
   duration: 800,
   easing: "easeInOutSine",
 });
+// fixes navbar in place after animation
+var element = document.getElementById("navBar");
+element.style.position = "fixed";
 
 anime({
   targets: ".hairlineSeparator",
-  translateX: ["-90vw", "10vw"],
+  translateY: ["10vh", "-2vh"],
   duration: 600,
   easing: "easeInOutSine",
 });
@@ -31,4 +36,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       behavior: "smooth",
     });
   });
+});
+
+// records scroll position
+addEventListener("scroll", (event) => {});
+onscroll = (event) => {
+  console.log(scrollY);
+};
+
+// movement for the about me section
+$(document).on("scroll.something", function () {
+  if ($(this).scrollTop() >= $("#page2").position().top) {
+    //Do something
+
+    //Unbind the event
+    $(document).off("scroll.something");
+  }
 });
