@@ -34,7 +34,7 @@ p {
   margin-left: 20vh;
   margin-right: 20vh;
   margin-top: 16vh;
-  margin-bottom: 16vh;
+  margin-bottom: 2vh;
   justify-self: center;
 }
 
@@ -51,14 +51,27 @@ p {
 }
 
 #Welcome {
-  padding-top: 6vh;
+  padding-top: 0vh;
+}
+
+#aboutMe {
+  color:rgb(255, 149, 237);
+}
+
+#aboutMeFlavorText {
+  margin-top: 1vh;
+  padding-top: 1vh;
+  font-size: 3vh;
+  word-wrap: break-word;
+  width: 40vw;
 }
 
 #navBar {
   list-style: none;
   width: 24%;
   font-size: 2vh;
-  padding-top: 2vh;
+  padding-top: 1vh;
+  margin-top: -8vh;
   z-index: 100;
 }
 
