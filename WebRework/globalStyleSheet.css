@@ -7,7 +7,6 @@
 * {
   color: white;
   font-family: monoManiac;
-  width: 80vw;
 }
 
 body {
@@ -16,10 +15,17 @@ body {
 }
 
 .section {
-  padding-top: 6vh;
-  padding-bottom: 20vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  height: 88vh;
 }
 
 .subBody {
-  background-color: aliceblue;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 18vh;
+  padding: 0;
+  margin: 0;
 }
