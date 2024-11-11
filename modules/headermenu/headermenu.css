@@ -1,0 +1,7 @@
+@import url("../../assets/libraries/theme.css");
+
+.headertext {
+  font-size: 4rem;
+  padding: 1rem;
+  margin: 1rem;
+}

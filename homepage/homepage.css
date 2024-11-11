@@ -1,1 +1,65 @@
 @import url("../assets/libraries/theme.css");
+
+.scrollcontainer {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+#bigText {
+  font-size: 6rem;
+  padding: 0;
+  grid-column: span 2;
+  grid-row: 1;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#flavortext {
+  grid-column: 3;
+  grid-row: 2 / 3;
+  font-size: 2rem;
+}
+
+#scrollprompt {
+  grid-column: 2;
+  grid-row: 3;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#topgridcontainer {
+  display: grid;
+  grid-template-columns: 40vw 20vw 40vw;
+  grid-template-rows: 80vh 10vh 10vh;
+}
+
+.griditem {
+  padding: 0;
+  margin: 0;
+  justify-self: center;
+}
+
+#bottomgridcontainer {
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  grid-template-rows: 10vh 20vh 40vh 30vh;
+}
+
+#headermenucontainer {
+  grid-column: span 2;
+}
+
+.scrollitem {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+}
