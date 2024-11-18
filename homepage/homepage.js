@@ -33,3 +33,30 @@ document.addEventListener("DOMContentLoaded", () => {
     "../modules/headermenu/headermenu.css" // CSS URL for associated styles
   );
 });
+
+//  scroll curtain effect
+let lastScrollTop = 0; // Store the last scroll position
+let curtainUp = false;
+
+window.addEventListener('scroll', function() {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scrolling down
+        anime({
+          targets: '#topgridcontainer',
+          translateY: '-106vh', // Move curtain up out of view
+          duration: 1000, // Duration of animation in milliseconds
+          easing: 'easeInOutQuad', // Smooth easing for a natural effect
+      });
+    } else {
+      anime({
+        targets: '#topgridcontainer',
+        translateY: '0vh', // Move curtain up out of view
+        duration: 1000, // Duration of animation in milliseconds
+        easing: 'easeInOutQuad', // Smooth easing for a natural effect
+    });
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For mobile or negative scrolling
+});

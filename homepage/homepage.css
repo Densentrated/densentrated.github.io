@@ -1,12 +1,5 @@
 @import url("../assets/libraries/theme.css");
 
-.scrollcontainer {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
 #bigText {
   font-size: 6rem;
   padding: 0;
@@ -31,15 +24,28 @@ h1 {
   text-align: center;
 }
 
+.scrolltext {
+  font-size: 1rem;
+  padding: 0;
+  margin-top: 1.8rem;
+  margin-bottom: -2.2rem;
+  text-align: center;
+}
+
 p {
   margin: 0;
   padding: 0;
 }
 
 #topgridcontainer {
+  position: fixed;
   display: grid;
   grid-template-columns: 40vw 20vw 40vw;
   grid-template-rows: 80vh 10vh 10vh;
+  top: 0;
+  z-index: 10;
+  background-color: #89bfee;
+  box-shadow: 0 6vh 40px rgba(0,0,0,0.1);
 }
 
 .griditem {
@@ -52,10 +58,17 @@ p {
   display: grid;
   grid-template-columns: 40vw 60vw;
   grid-template-rows: 10vh 20vh 40vh 30vh;
+  position: relative;
+  z-index: 0;
+  transition: top 1s ease-in-out; /* Optional fallback for non-JS users */
 }
 
 #headermenucontainer {
   grid-column: span 2;
+}
+
+.scrollcontainer {
+  height: 100vh;
 }
 
 .scrollitem {
